@@ -7,9 +7,13 @@
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Share:400,700,400italic,700italic' rel='stylesheet' type='text/css' />
     <style type="text/css">
         html { overflow-y: scroll; }
         body { padding-top:50px; }
+        h1, h2, h3, h4 { font-family:Share, Share-Bold; font-weight: 700; }
+        h2 { font-size: 30pt; }
+        label, .checkbox, .form-control, .input-lg, .form-group, h5, h6, button, .btn, .btn-primary, .btn-lg  { font-family:Share; }
         #todo-list { margin-bottom:30px; }
         #todo-form { margin-bottom:50px; }
     </style>
@@ -24,14 +28,14 @@
     <div class="container">
 
         <div class="jumbotron text-center">
-            <h1 style="font-family:Share-Bold;">Todo's Today <span class="label label-info">{{ todos.length }}</span></h1>
+            <h2>Todo's to Do Today <span class="label label-info">{{ todos.length }}</span></h2>
         </div>
 
         <div id="todo-list" class="row">
             <div class="col-sm-4 col-sm-offset-4">
                 <div class="checkbox" ng-repeat="todo in todos">
                     <label>
-                        <input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }}
+                        <input type="checkbox" ng-click="deleteTodo(todo._id)" /> {{ todo.text }}
                     </label>
                 </div>
                 <p class="text-center" ng-show="loading">
