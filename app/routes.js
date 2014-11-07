@@ -67,7 +67,7 @@ module.exports = function(app) {
 
 /*  application  */
 app.get('*', function(req, res) {
-    res.sendfile('./public/index.html');   // load the view file (Angular will handle page changes on the front-end)
+    res.sendfile('../public/index.html');   // load the view file (Angular will handle page changes on the front-end)
 });
 
 };  //  module.exports
